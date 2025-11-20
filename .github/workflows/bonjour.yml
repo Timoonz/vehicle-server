@@ -7,6 +7,6 @@ jobs:
     steps:
       - name: "Récupération fichier"
         uses: actions/checkout@v5
-      - run: apt update && apt install cowsay -y   
+      - run: sudo apt install cowsay -y   
       - run: ls -l # Liste les fichier du répertoire courant
       - run: cat README.md | cowsay # Affiche le contenu du fichier `README.md` à la base du dépôt
