@@ -4,10 +4,15 @@ on:
 jobs:
   dire_bonjour:
     runs-on: ubuntu-latest
-    container: 
-      image: ghcr.io/cicd-lectures/gitpod:latest
-      options: --user=root
     steps:
-      - name: "Récupération fichier"
+      - name: checkout repository
         uses: actions/checkout@v5
-      - run: cat README.md | cowsay # Affiche le contenu du fichier `README.md` à la base du dépôt
+      - name: Read README
+        id: readfile
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./README
+      - name: the cowsay say
+        uses: Code-Hex/neo-cowsay-action@v1
+        with:
+          message: ${{ steps.readfile.outputs.content }}
