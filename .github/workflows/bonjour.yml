@@ -3,13 +3,11 @@ on:
   - push
 jobs:
   dire_bonjour:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
+    container: 
+      image: ghcr.io/cicd-lectures/gitpod:latest
+      options: --user=root
     steps:
       - name: "Récupération fichier"
-      - runs-on: ubuntu-latest
-        container: 
-          image: ghcr.io/cicd-lectures/gitpod:latest
-          options: --user=root
         uses: actions/checkout@v5
-      - run: ls -l # Liste les fichier du répertoire courant
       - run: cat README.md | cowsay # Affiche le contenu du fichier `README.md` à la base du dépôt
