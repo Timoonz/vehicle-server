@@ -11,7 +11,7 @@ jobs:
         id: readfile
         uses: juliangruber/read-file-action@v1
         with:
-          path: ./README
+          path: ./README.md
       - name: the cowsay say
         uses: Code-Hex/neo-cowsay-action@v1
         with:
