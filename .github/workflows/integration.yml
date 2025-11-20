@@ -1,0 +1,15 @@
+name: ci
+on:
+  - push
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v5
+      - name: set up node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: transcript the code 
+        run: npm run build
