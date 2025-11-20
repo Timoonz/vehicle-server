@@ -10,7 +10,7 @@ jobs:
       - name: set up node
         uses: actions/setup-node@v6
         with:
-          node-version: 24
+          node-version: 22.20
       - name: install module 
         run: npm ci
       - name: transcript the code 
