@@ -26,7 +26,7 @@ node dist/index.js
 #### Create a Vehicle
 
 ```bash
-curl -v -XPOST -H "Content-Type: application/json" --data '{"shortcode":"abbc", "battery": 12, "latitude": 53.43, "longitude": 43.43}' localhost:8080/vehicles | jq .
+curl -v -XPOST -H "Content-Type: application/json" --data '{"shortcode":"acabbc", "battery": 12, "latitude": 53.43, "longitude": 43.43}' localhost:8080/vehicles | jq .
 ```
 
 #### List all Vehicles

@@ -1,4 +1,3 @@
-import { dropSchema } from '../database';
 import { VehicleStore } from '../store/vehicle';
 import { Request, Response } from 'express';
 
