@@ -6,7 +6,7 @@ import { FakeResponse } from "../fake/response";
 import { CreateVehicleController } from "./create";
 import { Vehicle } from "../model/vehicle";
 import { VehicleStore } from "../store/vehicle";
-import { AppError, ErrorCode } from "../errors";
+// import { AppError, ErrorCode } from "../errors";
 
 // On définit ici un module `Mock` ie: tout chargement du module `import { VehicleStore } from "../store/vehicle'`
 // retournera une """fausse""" implémentation qui  n'intéragit pas avec la base de données.
